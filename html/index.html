@@ -24,7 +24,7 @@
     <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
   </head>
   <body>
-    <header>
+    <header class='clearfix'>
       <h1>
         <a class="swap" href="#about">Rachel Schmitz</a>
       </h1>
@@ -37,13 +37,13 @@
         </ul>
       </nav>
     </header>
-    <section role='main'>
+    <section class='clearfix' role='main'>
       <article class='swapout initial' id='index'>
-        <div class='left image'>
+        <h2>About Rachel Schmitz (M.A.)</h2>
+        <div class='image'>
           <img src="http://placehold.it/260x380" />
         </div>
-        <div class='right info'>
-          <h2>About Rachel Schmitz (M.A.)</h2>
+        <div class='info'>
           <p>As a sociologist, my focus on Women's &amp; Gender Studies has shaped not only my academic career, but also served to focus my research and hone my teaching. My</p>
           <a class="swap" href="#research">dissertation research</a>
           &nbsp;is currently in progress, in which I have begun to qualitatively compare and contrast life trajectories of non-normative sexual identity young adults, specifically concerning the areas of homelessness versus college careers
@@ -52,11 +52,11 @@
         </div>
       </article>
       <article class='swapout' id='about'>
-        <div class='left image'>
+        <h2>About Rachel Schmitz (M.A.)</h2>
+        <div class='image'>
           <img src="http://placehold.it/260x380" />
         </div>
-        <div class='right info'>
-          <h2>About Rachel Schmitz (M.A.)</h2>
+        <div class='info'>
           <p>As a sociologist, my focus on Women's &amp; Gender Studies has shaped not only my academic career, but also served to focus my research and hone my teaching. My</p>
           <a class="swap" href="#research">dissertation research</a>
           &nbsp;is currently in progress, in which I have begun to qualitatively compare and contrast life trajectories of non-normative sexual identity young adults, specifically concerning the areas of homelessness versus college careers
@@ -375,8 +375,11 @@
         </div>
       </article>
     </section>
-    <footer>
-      <small>
+    <footer class='clearfix'>
+      <div id='unl'>
+        <a class="unl-link" href="http://soc.unl.edu">UNL</a>
+      </div>
+      <small class='right'>
         Rachel Schmitz, Sociologist © 2015
       </small>
     </footer>
