@@ -103,17 +103,16 @@ h1 {
 h2 {
   font-weight: normal;
   line-height: 1.2;
-  margin: .75em 0 1em;
+  margin: .5em 0;
 }
 h3 {
   font-weight: normal;
   line-height: 1.1;
-  margin: 1.25em 0 0.5em;
+  margin: .5em 0;
 }
 h4 {
   font-weight: normal;
-  font-size: 110%;
-  margin: 0.5em 0 0.5em;
+  margin: 0.5em 0;
 }
 h5 {
   font-style: italic;
@@ -127,7 +126,8 @@ h6 {
 }
 p {
   margin: 1em 0;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 1.2;
 }
 ul, ol, dl {
   margin-top: 1em;
@@ -173,10 +173,14 @@ pre {
 img { 
   width: 100%;
 }
+
+/**** quick styles ****/
 .hidden {
+  visibility: hidden;
+}
+.none {
   display: none;
 }
-/**** quick styles ****/
 .left {
   float: left;
 }
@@ -216,12 +220,13 @@ img {
 }
 
 /*** type ***/
-h1, h3, h5 {
-  font-family: 'Arvo', Arvo, Georgia, Times, serif;
+h1, h3, h5, h2, h4, h6 {
+  font-family: 'Bitter', Georgia, Times, serif;
 }
-h2, h4, h6 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+p, a, span {
+  font-family: 'Raleway', Helvetica, sans-serif;
 }
+
 h1 {
   font-size: 24px;
 }
@@ -234,6 +239,10 @@ h3 {
 h4 {
   font-size: 18px;
 }
+ul, ol, dl, dt, li {
+  font-size: 18px;
+}
+
 
 /** button styles **/
 .button {
@@ -267,3 +276,203 @@ h4 {
 /** for swapping **/
 .swapout { display: none;}
 .initial { display: block;}
+
+
+/*** layout ***/
+body {
+  color: #242424;
+}
+header {
+  width: 100%;
+  -webkit-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
+                            0px 4px 4px 0px rgba(34,34,34,.8);
+  -moz-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
+                         0px 4px 4px 0px rgba(34,34,34,.8);
+  box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
+                    0px 4px 4px 0px rgba(34,34,34,.8);
+  h1 {
+    float: left;
+    margin-left: 5%;
+  }
+  nav.menu {
+    float: right;
+    margin-right:  5%;
+    ul {
+      margin-top: 1.4em;
+      list-style-type: none;
+      li {
+        display: inline;
+        a {
+
+        }
+      }
+      li~li {
+        padding-left: 1em;
+      }
+    }
+  }
+  @media screen and (max-width: 720px) {
+    nav.menu {
+      float: none;
+      clear: both;
+      width: 112%;
+      margin-left: -6%;
+      margin-right: 0;
+      ul {
+        margin-top: 1.4em;
+        list-style-type: none;
+        padding-left: 0;
+        li {
+          transition: background 0.2s ease;
+          display: block;
+          padding: .5em 1em;
+          background: #ddd;
+          margin: 0;
+          a {
+
+          }
+        }
+        li:hover,
+        li:focus {
+          background: #999;
+        }
+        li~li {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+}
+section[role=main] {
+  padding: 0 5%;
+  margin-top: 2em;
+  article {
+
+  }
+}
+footer {
+  background-color: #fff;
+  -webkit-box-shadow: 0px -4px 4px 0px rgba(34,34,34,1);
+  -moz-box-shadow: 0px -4px 4px 0px rgba(34,34,34,1);
+  box-shadow: 0px -4px 4px 0px rgba(34,34,34,1);
+  padding: 0 5%;
+  box-sizing: border-box;
+  #unl {
+    float: left;
+    .unl-link {
+      display: block;
+      color: transparent;
+      width: 75px;
+      height: 31px;
+      margin-top: 10px;
+      background: transparent image-url('unl_logo.jpg') no-repeat center;
+      background-size: contain;
+    }
+  }
+  small {
+    margin-top: 1.4em;
+    font-size: 12px;
+  }
+}
+
+/*** sticky footer ***/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0 0 45px; /* bottom = footer height */
+}
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 45px;
+    width: 100%;
+}
+
+
+/*** type ***/
+
+
+/*** content ***/
+article {
+  clear: both;
+  h1 {
+
+  }
+  h2 {
+
+  }
+  h3 {
+
+  }
+  p {
+
+  }
+  ul {
+    li {
+
+    }
+  }
+  dl {
+    dt {
+
+    }
+    dl {
+
+    }
+  }
+}
+
+a,
+a:link {
+  color: #333;
+  text-decoration: underline;
+}
+
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: #444;
+  text-decoration: none;
+}
+
+
+#index,
+#about {
+  .image {
+    float: left;
+    width: 28%;
+    min-width: 180px;
+    @media screen and (max-width: 480px) {
+      width: 50%;
+      float: none;
+      margin: auto;
+    }
+    img {
+      border-radius: 6px;
+      @media screen and (max-width: 480px) {
+        border-radius: 50%;
+        -webkit-box-shadow: 5px 3px 1px #666;
+        -moz-box-shadow: 5px 3px 1px #666;
+        box-shadow: 5px 3px 1px #666;
+      }
+    }
+  }
+  .info {
+    width: 69%;
+    float: right;
+    min-width: 300px;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      float: none;
+    }
+  }
+}
+#teaching {}
+#research {}
+#cv {}
+#contact {}
+

@@ -10,11 +10,11 @@
     %meta{name: "DC.title", content: "Rachel Schmitz, Sociologist"}
     %meta{name: "robots", content:"index, follow"}
 
-    / %link{:href => "touchicon.png", :rel => "apple-touch-icon"}
-    / %link{:href => "favicon.png", :rel => "icon"}
-    /   /[if IE] <link rel="shortcut icon" href="favicon.ico">
-    / %meta{:content => "#D83434", :name => "msapplication-TileColor"}
-    / %meta{:content => "tileicon.png", :name => "msapplication-TileImage"}
+    %link{:href => "touchicon.png", :rel => "apple-touch-icon"}
+    %link{:href => "favicon.png", :rel => "icon"}
+      /[if IE] <link rel="shortcut icon" href="favicon.ico">
+    %meta{:content => "#D83434", :name => "msapplication-TileColor"}
+    %meta{:content => "tileicon.png", :name => "msapplication-TileImage"}
 
     %link{:href => "/stylesheets/screen.css", :rel => "stylesheet"}
     
@@ -26,8 +26,8 @@
     %script{src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"}
     
   %body
-    %header
-      %h1 
+    %header.clearfix
+      %h1
         = link_to "Rachel Schmitz", "#about", class: "swap"
       %nav.menu
         %ul
@@ -36,7 +36,7 @@
           %li= link_to "CV", "#cv", class: "swap"
           %li= link_to "Contact", "#contact", class: "swap"
 
-    %section{:role => "main"}
+    %section.clearfix{:role => "main"}
       %article.swapout.initial#index= yield
       %article.swapout#about= render "partials/about"
       %article.swapout#teaching= render "partials/teaching"
@@ -44,8 +44,10 @@
       %article.swapout#cv= render "partials/cv"
       %article.swapout#contact= render "partials/contact"
 
-    %footer
-      %small
+    %footer.clearfix
+      #unl
+        =link_to "UNL", "http://soc.unl.edu", class: "unl-link"
+      %small.right
         Rachel Schmitz, Sociologist © 2015 
 
     %script{src: "/javascripts/swap.js"}

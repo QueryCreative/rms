@@ -310,3 +310,7 @@ h4 {
 .initial {
   display: block;
 }
+
+body {
+  background-color: #eee;
+}
