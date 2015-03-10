@@ -1,0 +1,51 @@
+!!!
+%html{lang: "en"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %title "Rachel Schmitz, Sociologist"
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    %meta{name: "copyright", content: "Rachel Schmitz, Sociologist © 2015"}
+    %meta{name: "description", content: "Rachel Schmitz, sociologist, is"}
+    %meta{name: "keywords", content: "Sociologist, Sociology, Teaching, Research, UNL"}
+    %meta{name: "DC.title", content: "Rachel Schmitz, Sociologist"}
+    %meta{name: "robots", content:"index, follow"}
+
+    / %link{:href => "touchicon.png", :rel => "apple-touch-icon"}
+    / %link{:href => "favicon.png", :rel => "icon"}
+    /   /[if IE] <link rel="shortcut icon" href="favicon.ico">
+    / %meta{:content => "#D83434", :name => "msapplication-TileColor"}
+    / %meta{:content => "tileicon.png", :name => "msapplication-TileImage"}
+
+    %link{:href => "/stylesheets/screen.css", :rel => "stylesheet"}
+    
+
+    = render 'layouts/shim'
+
+    %script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
+    %link{href: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"}
+    %script{src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"}
+    
+  %body
+    %header
+      %h1 
+        = link_to "Rachel Schmitz", "#about", class: "swap"
+      %nav.menu
+        %ul
+          %li= link_to "Teaching", "#teaching", class: "swap"
+          %li= link_to "Research &amp; Publications", "#research", class: "swap"
+          %li= link_to "CV", "#cv", class: "swap"
+          %li= link_to "Contact", "#contact", class: "swap"
+
+    %section{:role => "main"}
+      %article.swapout.initial#index= yield
+      %article.swapout#about= render "partials/about"
+      %article.swapout#teaching= render "partials/teaching"
+      %article.swapout#research= render "partials/research"
+      %article.swapout#cv= render "partials/cv"
+      %article.swapout#contact= render "partials/contact"
+
+    %footer
+      %small
+        Rachel Schmitz, Sociologist © 2015 
+
+    %script{src: "/javascripts/swap.js"}
