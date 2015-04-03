@@ -355,9 +355,9 @@ header {
 }
 section[role=main] {
   padding: 0 5%;
-  margin: 2em 0;
+  margin: 0 auto;
   article {
-
+    margin: 2em auto;
   }
 }
 footer {
@@ -460,6 +460,7 @@ a:focus {
 
 #index,
 #about {
+  padding: 0 9%;
   h2 {
     @media screen and (max-width: 720px) {
       text-align: center;
@@ -469,6 +470,7 @@ a:focus {
     float: left;
     width: 28%;
     min-width: 180px;
+    max-width: 280px;
     @media screen and (max-width: 720px) {
       width: 50%;
       float: none;
@@ -485,7 +487,7 @@ a:focus {
     }
   }
   .info {
-    width: 69%;
+    width: 67%;
     float: right;
     min-width: 300px;
     max-width: 650px;
@@ -496,19 +498,54 @@ a:focus {
   }
 }
 #teaching {
+  margin: 0 auto;
   .banner {
     @media (max-width:600px) {
-     .image {
+     img {
         display:none;
      }
     }
     @media (min-width:601px) {
-       .image {
-          background-image: image-url('banner-teaching.jpg');
-       }
+      background-image: image-url('banner_chalkboard.jpg');
+      background-size: cover;
+      width: 120%;
+      position: relative;
+      height: 220px;
+      top: 0;
+      left: -10%;
+      img {
+        width: 455px;
+        display: block;
+        margin: auto;
+        text-align: center;
+      }
     }
   }
 }
-#research {}
+#research {
+  .image {
+    width: 45%;
+    &.left {
+      float: left;
+      margin-right: 5%;
+      margin-bottom: 1em;
+    }
+    &.right{
+      float: right;
+      margin-left: 5%;
+      margin-bottom: 1em;
+    }
+    @media screen and (max-width: 480px) {
+      float: none;
+      width: 100%;
+      text-align: center;
+      margin: 1em auto;
+    }
+  }
+}
 #cv {}
 #contact {}
+
+.allcaps {
+  text-transform: uppercase;
+}
