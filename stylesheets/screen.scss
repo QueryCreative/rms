@@ -279,11 +279,19 @@ ul, ol, dl, dt, li {
 
 
 /*** layout ***/
+html {
+  /*background: #fff image-url('fabric-bkgd.png');
+  background: #fff image-url('handmadepaper.png');
+  background: #fff image-url('soft-bkgd.png');*/
+  background: #fff image-url('tile-bkgd.png');
+}
 body {
   color: #242424;
+  background-color: transparent;
 }
 header {
   width: 100%;
+  background-color: #f2f2f2;
   @media screen and (min-width: 721px){
     -webkit-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
                               0px 4px 4px 0px rgba(34,34,34,.8);
@@ -353,7 +361,7 @@ section[role=main] {
   }
 }
 footer {
-  background-color: #fff;
+  background-color: #f2f2f2;
   @media screen and (min-width: 721px) {
     -webkit-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1), 
                         0px -4px 4px 0px rgba(34,34,34,1);
@@ -375,7 +383,7 @@ footer {
       width: 75px;
       height: 31px;
       margin-top: 10px;
-      background: transparent url('/images/unl_logo.jpg') no-repeat center;
+      background: transparent url('/images/unl_logo.png') no-repeat center;
       background-size: contain;
     }
   }
@@ -457,7 +465,7 @@ a:focus {
       text-align: center;
     }
   }
-  .image {
+  .portrait {
     float: left;
     width: 28%;
     min-width: 180px;
@@ -487,8 +495,20 @@ a:focus {
     }
   }
 }
-#teaching {}
+#teaching {
+  .banner {
+    @media (max-width:600px) {
+     .image {
+        display:none;
+     }
+    }
+    @media (min-width:601px) {
+       .image {
+          background-image: image-url('banner-teaching.jpg');
+       }
+    }
+  }
+}
 #research {}
 #cv {}
 #contact {}
-
