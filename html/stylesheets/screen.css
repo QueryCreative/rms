@@ -285,6 +285,10 @@ ul, ol, dl, dt, li {
   font-size: 18px;
 }
 
+dd {
+  margin-bottom: 0;
+}
+
 /** button styles **/
 .button.blue a {
   color: white;
@@ -320,15 +324,28 @@ ul, ol, dl, dt, li {
 }
 
 /*** layout ***/
+html {
+  /*background: #fff image-url('fabric-bkgd.png');
+  background: #fff image-url('handmadepaper.png');
+  background: #fff image-url('soft-bkgd.png');*/
+  background: #fff url('../images/tile-bkgd.png?1428003616');
+}
+
 body {
   color: #242424;
+  background-color: transparent;
 }
 
 header {
   width: 100%;
-  -webkit-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px 4px 4px 0px rgba(34, 34, 34, 0.8);
-  -moz-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px 4px 4px 0px rgba(34, 34, 34, 0.8);
-  box-shadow: inset 1.5em 0px 0px 0px #333333, 0px 4px 4px 0px rgba(34, 34, 34, 0.8);
+  background-color: #f2f2f2;
+}
+@media screen and (min-width: 721px) {
+  header {
+    -webkit-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px 4px 4px 0px rgba(34, 34, 34, 0.8);
+    -moz-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px 4px 4px 0px rgba(34, 34, 34, 0.8);
+    box-shadow: inset 1.5em 0px 0px 0px #333333, 0px 4px 4px 0px rgba(34, 34, 34, 0.8);
+  }
 }
 header h1 {
   float: left;
@@ -340,6 +357,7 @@ header nav.menu {
 }
 header nav.menu ul {
   margin-top: 1.4em;
+  margin-bottom: 0;
   list-style-type: none;
 }
 header nav.menu ul li {
@@ -352,8 +370,8 @@ header nav.menu ul li ~ li {
   header nav.menu {
     float: none;
     clear: both;
-    width: 112%;
-    margin-left: -6%;
+    width: 100%;
+    margin-left: 0;
     margin-right: 0;
   }
   header nav.menu ul {
@@ -379,16 +397,29 @@ header nav.menu ul li ~ li {
 
 section[role=main] {
   padding: 0 5%;
-  margin-top: 2em;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+section[role=main] article {
+  margin: 2em auto;
 }
 
 footer {
-  background-color: #fff;
-  -webkit-box-shadow: 0px -4px 4px 0px #222222;
-  -moz-box-shadow: 0px -4px 4px 0px #222222;
-  box-shadow: 0px -4px 4px 0px #222222;
+  background-color: #f2f2f2;
   padding: 0 5%;
   box-sizing: border-box;
+}
+@media screen and (min-width: 721px) {
+  footer {
+    -webkit-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px -4px 4px 0px #222222;
+    -moz-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px -4px 4px 0px #222222;
+    box-shadow: inset 1.5em 0px 0px 0px #333333, 0px -4px 4px 0px #222222;
+  }
+}
+@media screen and (max-width: 720px) {
+  footer {
+    border-top: 1px solid #999;
+  }
 }
 footer #unl {
   float: left;
@@ -399,7 +430,7 @@ footer #unl .unl-link {
   width: 75px;
   height: 31px;
   margin-top: 10px;
-  background: transparent url("/images/unl_logo.jpg") no-repeat center;
+  background: transparent url("/images/unl_logo.png") no-repeat center;
   background-size: contain;
 }
 footer small {
@@ -446,27 +477,39 @@ a:focus {
   text-decoration: none;
 }
 
-#index .image,
-#about .image {
+#index,
+#about {
+  margin: 2em auto;
+  padding: 0 9%;
+}
+@media screen and (max-width: 720px) {
+  #index h2,
+  #about h2 {
+    text-align: center;
+  }
+}
+#index .portrait,
+#about .portrait {
   float: left;
   width: 28%;
   min-width: 180px;
+  max-width: 280px;
 }
-@media screen and (max-width: 480px) {
-  #index .image,
-  #about .image {
+@media screen and (max-width: 720px) {
+  #index .portrait,
+  #about .portrait {
     width: 50%;
     float: none;
     margin: auto;
   }
 }
-#index .image img,
-#about .image img {
+#index .portrait img,
+#about .portrait img {
   border-radius: 6px;
 }
 @media screen and (max-width: 480px) {
-  #index .image img,
-  #about .image img {
+  #index .portrait img,
+  #about .portrait img {
     border-radius: 50%;
     -webkit-box-shadow: 5px 3px 1px #666;
     -moz-box-shadow: 5px 3px 1px #666;
@@ -475,14 +518,179 @@ a:focus {
 }
 #index .info,
 #about .info {
-  width: 69%;
+  width: 67%;
   float: right;
   min-width: 300px;
+  max-width: 650px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 720px) {
   #index .info,
   #about .info {
     width: 100%;
     float: none;
   }
+}
+
+#teaching {
+  margin: 0 auto;
+}
+#teaching .banner {
+  margin-bottom: 1em;
+}
+@media (max-width: 600px) {
+  #teaching .banner {
+    display: none;
+  }
+  #teaching .banner img {
+    display: none;
+  }
+}
+@media (min-width: 601px) {
+  #teaching .banner {
+    background-image: url('../images/banner_chalkboard.jpg?1428075765');
+    background-size: cover;
+    width: 120%;
+    position: relative;
+    height: 220px;
+    top: 0;
+    left: -10%;
+    margin-bottom: 1em;
+  }
+  #teaching .banner img {
+    width: 455px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+@media (min-width: 601px) {
+  #research {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  #research .banner {
+    display: none;
+  }
+  #research .banner img {
+    display: none;
+  }
+}
+@media (min-width: 601px) {
+  #research .banner {
+    background-image: url('../images/wordcloud.png?1428355927');
+    background-size: cover;
+    width: 100%;
+    height: 270px;
+    margin-bottom: 1em;
+  }
+  #research .banner img {
+    width: 455px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+@media (min-width: 901px) {
+  #research .banner {
+    height: 440px;
+  }
+}
+#research .image {
+  width: 45%;
+}
+#research .image.left {
+  float: left;
+  margin-right: 5%;
+  margin-bottom: 1em;
+}
+#research .image.right {
+  float: right;
+  margin-left: 5%;
+  margin-bottom: 1em;
+}
+@media screen and (max-width: 480px) {
+  #research .image {
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin: 1em auto;
+  }
+}
+
+@media (min-width: 601px) {
+  #cv {
+    margin: 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  #cv .banner {
+    display: none;
+  }
+  #cv .banner img {
+    display: none;
+  }
+}
+@media (min-width: 601px) {
+  #cv .banner {
+    background-image: url('../images/banner_books.jpg?1428079322');
+    background-size: cover;
+    width: 120%;
+    position: relative;
+    height: 220px;
+    top: 0;
+    left: -10%;
+    margin-bottom: 1em;
+  }
+  #cv .banner img {
+    width: 455px;
+    display: block;
+    margin: auto;
+    text-align: center;
+  }
+}
+
+#contact {
+  padding: 0 9%;
+}
+@media screen and (min-width: 850px) {
+  #contact {
+    padding: 0 20%;
+  }
+}
+@media screen and (min-width: 601px) {
+  #contact .contact-info {
+    float: left;
+    width: 50%;
+  }
+}
+#contact .contact-info .logo-unl .unl-link {
+  display: block;
+  color: transparent;
+  width: 125px;
+  height: 50px;
+  margin-bottom: 1em;
+  background: transparent url("/images/unl_logo.png") no-repeat center;
+  background-size: contain;
+}
+#contact .image-right {
+  width: 40%;
+  float: right;
+}
+@media screen and (min-width: 601px) {
+  #contact .image-right {
+    max-width: 230px;
+  }
+}
+@media screen and (max-width: 600px) {
+  #contact .image-right {
+    width: 100%;
+    margin-top: 1em;
+    float: none;
+  }
+}
+
+.allcaps {
+  text-transform: uppercase;
 }
