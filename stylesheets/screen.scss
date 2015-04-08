@@ -140,6 +140,10 @@ ul, ol, dd {
 ul {
   list-style: disc;
 }
+ul.nodots {
+  list-style: none;
+  padding-left: 0; /** or 1em; */
+}
 ol {
   list-style: decimal;
 }
@@ -415,9 +419,6 @@ footer {
 
 
 /*** type ***/
-
-
-/*** content ***/
 article {
   clear: both;
   h1 {
@@ -439,10 +440,10 @@ article {
   }
   dl {
     dt {
-
+      font-size: 18px;
     }
-    dl {
-
+    dd {
+      font-size: 16px;
     }
   }
 }
@@ -461,11 +462,39 @@ a:focus {
   text-decoration: none;
 }
 
+.date {
+  font-weight: bold;
+}
 
+.experience {
+  p {
+    margin-bottom: .25em;
+    span.pi {
+
+    }
+  }
+  ul {
+    padding-left: 2.5em;
+    font-size: 14px;
+    margin-top: 0;
+    margin-bottom: 0;
+    li {
+      font-size: 14px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+
+/*** content ***/
 #index,
 #about {
   margin: 2em auto;
   padding: 0 9%;
+  @media screen and (max-width: 520px) {
+    padding: 0;
+  }
   h2 {
     @media screen and (max-width: 720px) {
       text-align: center;
@@ -483,12 +512,6 @@ a:focus {
     }
     img {
       border-radius: 6px;
-      @media screen and (max-width: 480px) {
-        border-radius: 50%;
-        -webkit-box-shadow: 5px 3px 1px #666;
-        -moz-box-shadow: 5px 3px 1px #666;
-        box-shadow: 5px 3px 1px #666;
-      }
     }
   }
   .info {
@@ -563,13 +586,11 @@ a:focus {
     width: 45%;
     &.left {
       float: left;
-      margin-right: 5%;
-      margin-bottom: 1em;
+      margin: .75em 2em .75em 0;
     }
     &.right{
       float: right;
-      margin-left: 5%;
-      margin-bottom: 1em;
+      margin: .75em 0 .75em 2em;
     }
     @media screen and (max-width: 480px) {
       float: none;
