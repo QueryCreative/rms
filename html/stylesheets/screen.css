@@ -142,7 +142,7 @@ h6 {
 p {
   margin: 1em 0;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 
 ul, ol, dl {
@@ -157,6 +157,12 @@ ul, ol, dd {
 
 ul {
   list-style: disc;
+}
+
+ul.nodots {
+  list-style: none;
+  padding-left: 0;
+  /** or 1em; */
 }
 
 ol {
@@ -229,6 +235,14 @@ img {
 .centered {
   margin: 0 auto;
   text-align: center;
+}
+
+.allcaps {
+  text-transform: uppercase;
+}
+
+.underlined {
+  text-decoration: underline;
 }
 
 .black {
@@ -458,9 +472,14 @@ footer {
 }
 
 /*** type ***/
-/*** content ***/
 article {
   clear: both;
+}
+article dl dt {
+  font-size: 18px;
+}
+article dl dd {
+  font-size: 16px;
 }
 
 a,
@@ -477,10 +496,36 @@ a:focus {
   text-decoration: none;
 }
 
+.date {
+  font-weight: bold;
+}
+
+.experience p {
+  margin-bottom: .25em;
+}
+.experience ul {
+  padding-left: 2.5em;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.experience ul li {
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*** content ***/
 #index,
 #about {
   margin: 2em auto;
-  padding: 0 9%;
+  padding: 0 11%;
+}
+@media screen and (max-width: 520px) {
+  #index,
+  #about {
+    padding: 0;
+  }
 }
 @media screen and (max-width: 720px) {
   #index h2,
@@ -507,18 +552,9 @@ a:focus {
 #about .portrait img {
   border-radius: 6px;
 }
-@media screen and (max-width: 480px) {
-  #index .portrait img,
-  #about .portrait img {
-    border-radius: 50%;
-    -webkit-box-shadow: 5px 3px 1px #666;
-    -moz-box-shadow: 5px 3px 1px #666;
-    box-shadow: 5px 3px 1px #666;
-  }
-}
 #index .info,
 #about .info {
-  width: 67%;
+  width: 64%;
   float: right;
   min-width: 300px;
   max-width: 650px;
@@ -602,13 +638,11 @@ a:focus {
 }
 #research .image.left {
   float: left;
-  margin-right: 5%;
-  margin-bottom: 1em;
+  margin: .75em 2em .75em 0;
 }
 #research .image.right {
   float: right;
-  margin-left: 5%;
-  margin-bottom: 1em;
+  margin: .75em 0 .75em 2em;
 }
 @media screen and (max-width: 480px) {
   #research .image {
@@ -623,6 +657,9 @@ a:focus {
   #cv {
     margin: 0 auto;
   }
+}
+#cv h1 {
+  font-size: 36px;
 }
 @media (max-width: 600px) {
   #cv .banner {
@@ -649,6 +686,10 @@ a:focus {
     margin: auto;
     text-align: center;
   }
+}
+#cv .reviews,
+#cv .development {
+  padding-left: 1.5em;
 }
 
 #contact {
@@ -691,6 +732,6 @@ a:focus {
   }
 }
 
-.allcaps {
-  text-transform: uppercase;
+.pi {
+  font-size: 14px;
 }
