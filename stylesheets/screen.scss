@@ -127,7 +127,7 @@ h6 {
 p {
   margin: 1em 0;
   font-size: 16px;
-  line-height: 1.2;
+  line-height: 1.4;
 }
 ul, ol, dl {
   margin-top: 1em;
@@ -203,6 +203,13 @@ img {
   margin: 0 auto;
   text-align: center;
 }
+.allcaps {
+  text-transform: uppercase;
+}
+.underlined {
+  text-decoration: underline;
+}
+
 .black {
   color: #222 !important;
 }
@@ -491,7 +498,7 @@ a:focus {
 #index,
 #about {
   margin: 2em auto;
-  padding: 0 9%;
+  padding: 0 11%;
   @media screen and (max-width: 520px) {
     padding: 0;
   }
@@ -515,7 +522,7 @@ a:focus {
     }
   }
   .info {
-    width: 67%;
+    width: 64%;
     float: right;
     min-width: 300px;
     max-width: 650px;
@@ -604,6 +611,9 @@ a:focus {
   @media (min-width:601px) {
     margin: 0 auto;
   }
+  h1 {
+    font-size: 36px;
+  }
   .banner {
     @media (max-width:600px) {
       display:none;
@@ -627,6 +637,10 @@ a:focus {
         text-align: center;
       }
     }
+  }
+  .reviews,
+  .development {
+    padding-left: 1.5em;
   }
 }
 #contact {
@@ -668,6 +682,8 @@ a:focus {
   }
 }
 
-.allcaps {
-  text-transform: uppercase;
+.pi {
+  font-size: 14px;
 }
+
+
