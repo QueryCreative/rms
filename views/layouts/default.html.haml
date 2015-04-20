@@ -52,6 +52,10 @@
       #unl
         =link_to "UNL", "http://soc.unl.edu", class: "unl-link"
       %small.right
-        Rachel M. Schmitz, Sociologist © 2015 
+        =link_to "Back to Top", "javascript:void(0)", class: "backtotop"
+        &#124; Rachel M. Schmitz, Sociologist © 2015 
 
     %script{src: "/javascripts/swap.js"}
+
+:javascript
+  jQuery('.backtotop').click(function(){ jQuery('html, body').animate({scrollTop:0}, 'slow'); });
