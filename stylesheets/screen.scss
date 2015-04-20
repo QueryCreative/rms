@@ -493,6 +493,21 @@ a:focus {
   }
 }
 
+nav, h1 {
+  a,
+  a:link {
+    color: #333;
+    text-decoration: none;
+  }
+
+  a:visited,
+  a:hover,
+  a:active,
+  a:focus {
+    color: #444;
+    text-decoration: underline;
+  }
+}
 
 /*** content ***/
 #index,
@@ -604,6 +619,43 @@ a:focus {
       width: 100%;
       text-align: center;
       margin: 1em auto;
+    }
+  }
+}
+#publications{
+  .banner {
+    @media (max-width:600px) {
+      display:none;
+      img {
+        display:none;
+      }
+    }
+    @media (min-width:601px) {
+      width: 100%;
+      margin-bottom: 1em;
+      img {
+        margin: auto;
+        text-align: center;
+      }
+    }
+    @media (min-width:901px) {
+      img {
+        max-height: 400px;
+      }
+    }
+  }
+  .typing-bruce {
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: 12px solid #222;
+    border-radius: 12px;
+    @media (max-width:620px) {
+      display: none;
+    }
+    @media (min-width:621px) {
+      float: right;
+      width: 40%;
+      margin-left: 5%;
     }
   }
 }

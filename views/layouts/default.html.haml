@@ -34,7 +34,8 @@
       %nav.menu
         %ul
           %li= link_to "Teaching", "#teaching", class: "swap"
-          %li= link_to "Research &amp; Publications", "#research", class: "swap"
+          %li= link_to "Research", "#research", class: "swap"
+          %li= link_to "Publications", "#publications", class: "swap"
           %li= link_to "CV", "#cv", class: "swap"
           %li= link_to "Contact", "#contact", class: "swap"
 
@@ -43,6 +44,7 @@
       %article.swapout#about= render "partials/about"
       %article.swapout#teaching= render "partials/teaching"
       %article.swapout#research= render "partials/research"
+      %article.swapout#publications= render "partials/publications"
       %article.swapout#cv= render "partials/cv"
       %article.swapout#contact= render "partials/contact"
 
