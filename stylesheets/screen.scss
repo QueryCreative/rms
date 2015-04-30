@@ -222,6 +222,12 @@ img {
 .dark-gray {
   color: #585858;
 }
+.red {
+  color: #bd272d !important;
+}
+.red:hover {
+  color: #e91c24;
+}
 .shadowed {
   box-shadow: 0 3px 4px rgba(0,0,0,.3);
 }
@@ -335,7 +341,7 @@ header {
       }
     }
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 860px) {
     nav.menu {
       float: none;
       clear: both;
@@ -377,7 +383,7 @@ section[role=main] {
 }
 footer {
   background-color: #f2f2f2;
-  @media screen and (min-width: 721px) {
+  @media screen and (min-width: 861px) {
     -webkit-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1), 
                         0px -4px 4px 0px rgba(34,34,34,1);
     -moz-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
@@ -385,7 +391,7 @@ footer {
     box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
                 0px -4px 4px 0px rgba(34,34,34,1);
   }
-  @media screen and (max-width: 720px) {
+  @media screen and (max-width: 860px) {
     border-top: 1px solid #999;
   }
   padding: 0 5%;
@@ -738,4 +744,31 @@ nav, h1 {
   font-size: 14px;
 }
 
+.companions {
+  h2 {
+    text-align: center;
+  }
+  .pets {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    .pet {
+      width: 32%;
+      min-width: 200px;
+      border: 5px solid #fff;
+      border-radius: 5px;
+      margin: auto;
+      .caption {
+        text-align: center;
+        padding: 1em;
+        margin: 0;
+        background-color: #fff;
+      }
+    }
+  }
+  .roxy {}
+  .lucy {}
+  .sweetpea {}
+}
 

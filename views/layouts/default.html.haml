@@ -33,11 +33,12 @@
         = link_to "Rachel M. Schmitz", "#about", class: "swap"
       %nav.menu
         %ul
+          %li= link_to "Publications", "#publications", class: "swap"
           %li= link_to "Teaching", "#teaching", class: "swap"
           %li= link_to "Research", "#research", class: "swap"
-          %li= link_to "Publications", "#publications", class: "swap"
           %li= link_to "CV", "#cv", class: "swap"
           %li= link_to "Contact", "#contact", class: "swap"
+          %li= link_to "4-leggeds", "#pets", class: "swap red"
 
     %section.clearfix{:role => "main"}
       %article.swapout.initial#index= yield
@@ -47,6 +48,7 @@
       %article.swapout#publications= render "partials/publications"
       %article.swapout#cv= render "partials/cv"
       %article.swapout#contact= render "partials/contact"
+      %article.swapout#pets= render "partials/pets"
 
     %footer.clearfix
       #unl

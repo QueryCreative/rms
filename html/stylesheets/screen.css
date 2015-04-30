@@ -261,6 +261,14 @@ img {
   color: #585858;
 }
 
+.red {
+  color: #bd272d !important;
+}
+
+.red:hover {
+  color: #e91c24;
+}
+
 .shadowed {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }
@@ -380,7 +388,7 @@ header nav.menu ul li {
 header nav.menu ul li ~ li {
   padding-left: 1em;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 860px) {
   header nav.menu {
     float: none;
     clear: both;
@@ -423,14 +431,14 @@ footer {
   padding: 0 5%;
   box-sizing: border-box;
 }
-@media screen and (min-width: 721px) {
+@media screen and (min-width: 861px) {
   footer {
     -webkit-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px -4px 4px 0px #222222;
     -moz-box-shadow: inset 1.5em 0px 0px 0px #333333, 0px -4px 4px 0px #222222;
     box-shadow: inset 1.5em 0px 0px 0px #333333, 0px -4px 4px 0px #222222;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 860px) {
   footer {
     border-top: 1px solid #999;
   }
@@ -793,4 +801,27 @@ h1 a:focus {
 
 .pi {
   font-size: 14px;
+}
+
+.companions h2 {
+  text-align: center;
+}
+.companions .pets {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.companions .pets .pet {
+  width: 32%;
+  min-width: 200px;
+  border: 5px solid #fff;
+  border-radius: 5px;
+  margin: auto;
+}
+.companions .pets .pet .caption {
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+  background-color: #fff;
 }
