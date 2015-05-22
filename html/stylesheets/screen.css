@@ -641,7 +641,8 @@ h1 a:focus {
 @media (min-width: 601px) {
   #research .banner {
     background-image: url('../images/wordcloud.png?1428355927');
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 100%;
     height: 270px;
     margin-bottom: 1em;
