@@ -53,7 +53,7 @@ q:before, q:after, blockquote:before, blockquote:after {
 a img {
   border: none;
 }
-article, aside, details, figcaption, figure, footer, 
+article, aside, details, figcaption, figure, footer,
 header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -174,7 +174,7 @@ pre {
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
-img { 
+img {
   width: 100%;
 }
 
@@ -213,7 +213,7 @@ img {
 .black {
   color: #222 !important;
 }
-.white { 
+.white {
   color: white !important;
 }
 .gray {
@@ -384,7 +384,7 @@ section[role=main] {
 footer {
   background-color: #f2f2f2;
   @media screen and (min-width: 861px) {
-    -webkit-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1), 
+    -webkit-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
                         0px -4px 4px 0px rgba(34,34,34,1);
     -moz-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
                      0px -4px 4px 0px rgba(34,34,34,1);
@@ -408,9 +408,20 @@ footer {
       background-size: contain;
     }
   }
-  small {
+  .small {
     margin-top: 1.4em;
     font-size: 10px;
+  }
+  @media screen and (max-width: 520px) {
+    #unl {
+      display: none;
+    }
+    .small {
+      float: none !important;
+      margin: 1em auto 0;
+      font-size: 13px;
+      text-align: center;
+    }
   }
 }
 
@@ -522,6 +533,9 @@ nav, h1 {
   padding: 0 11%;
   @media screen and (max-width: 520px) {
     padding: 0;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 0 20%;
   }
   h2 {
     margin: 0;
@@ -669,11 +683,34 @@ nav, h1 {
   }
 }
 #cv {
+  .typing-bruce {
+    display: none;
+  }
+  .taught {
+    display: none;
+  }
+  .cv-download{
+    &::after {
+      content: '(Click to download pdf)';
+      display: inline-block;
+      color: #777;
+      font-size: 14px;
+      margin-left: 1em;
+    }
+    &:hover {
+      &::after {
+        text-decoration: underline;
+      }
+    }
+  }
   @media (min-width:601px) {
     margin: 0 auto;
   }
   h1 {
-    font-size: 36px;
+    font-size: 20px;
+    &.centered {
+      font-size: 36px;
+    }
   }
   .banner {
     @media (max-width:600px) {
@@ -699,6 +736,9 @@ nav, h1 {
       }
     }
   }
+  .banner~.banner {
+    display: none;
+  }
   .reviews,
   .development {
     padding-left: 1.5em;
@@ -708,6 +748,9 @@ nav, h1 {
   padding: 0 9%;
   @media screen and (min-width: 850px) {
     padding: 0 20%;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 0 30%;
   }
   .contact-info {
     @media screen and (min-width: 601px) {
@@ -766,6 +809,7 @@ nav, h1 {
         text-align: center;
         padding: 1em;
         margin: 0;
+        font-weight: bold;
         background-color: #fff;
       }
     }

@@ -455,9 +455,20 @@ footer #unl .unl-link {
   background: transparent url("/images/unl_logo.png") no-repeat center;
   background-size: contain;
 }
-footer small {
+footer .small {
   margin-top: 1.4em;
   font-size: 10px;
+}
+@media screen and (max-width: 520px) {
+  footer #unl {
+    display: none;
+  }
+  footer .small {
+    float: none !important;
+    margin: 1em auto 0;
+    font-size: 13px;
+    text-align: center;
+  }
 }
 
 /*** sticky footer ***/
@@ -550,6 +561,12 @@ h1 a:focus {
   #index,
   #about {
     padding: 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #index,
+  #about {
+    padding: 0 20%;
   }
 }
 #index h2,
@@ -726,12 +743,31 @@ h1 a:focus {
   }
 }
 
+#cv .typing-bruce {
+  display: none;
+}
+#cv .taught {
+  display: none;
+}
+#cv .cv-download::after {
+  content: '(Click to download pdf)';
+  display: inline-block;
+  color: #777;
+  font-size: 14px;
+  margin-left: 1em;
+}
+#cv .cv-download:hover::after {
+  text-decoration: underline;
+}
 @media (min-width: 601px) {
   #cv {
     margin: 0 auto;
   }
 }
 #cv h1 {
+  font-size: 20px;
+}
+#cv h1.centered {
   font-size: 36px;
 }
 @media (max-width: 600px) {
@@ -760,6 +796,9 @@ h1 a:focus {
     text-align: center;
   }
 }
+#cv .banner ~ .banner {
+  display: none;
+}
 #cv .reviews,
 #cv .development {
   padding-left: 1.5em;
@@ -771,6 +810,11 @@ h1 a:focus {
 @media screen and (min-width: 850px) {
   #contact {
     padding: 0 20%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #contact {
+    padding: 0 30%;
   }
 }
 @media screen and (min-width: 601px) {
@@ -829,5 +873,6 @@ h1 a:focus {
   text-align: center;
   padding: 1em;
   margin: 0;
+  font-weight: bold;
   background-color: #fff;
 }

@@ -1,7 +1,7 @@
 .banner
 
 %h1.centered
-	=link_to "Curriculum Vita", "/images/rms-cv.pdf", target: "_blank"
+	=link_to "Curriculum Vita", "/images/rms-cv.pdf", target: "_blank", class: "cv-download"
 %h2.allcaps Education
 .education
 	%p
@@ -42,6 +42,15 @@
 		%br
 		Undergraduate Thesis:
 		%i Living Latino/a in the Midwest: An Analysis of Cultural Perspectives Through the Lens of Latino-owned Businesses
+
+%hr
+= render "partials/publications"
+
+%hr
+= render "partials/research_experience"
+
+%hr
+= render "partials/teaching"
 
 %hr
 %h2.allcaps Professional Development

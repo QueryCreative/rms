@@ -19,14 +19,14 @@
     %meta{:content => "tileicon.png", :name => "msapplication-TileImage"}
 
     %link{:href => "/stylesheets/screen.css", :rel => "stylesheet"}
-    
+
 
     = render 'layouts/shim'
 
     %script{src: "//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"}
     %link{href: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"}
     %script{src: "//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"}
-    
+
   %body
     %header.clearfix
       %h1
@@ -53,9 +53,9 @@
     %footer.clearfix
       #unl
         =link_to "UNL", "http://soc.unl.edu", class: "unl-link"
-      %small.right
+      %p.small.right
         =link_to "Back to Top", "javascript:void(0)", class: "backtotop"
-        &#124; Rachel M. Schmitz, Sociologist © 2015 
+        &#124; Rachel M. Schmitz, Sociologist © 2015
 
     %script{src: "/javascripts/swap.js"}
 
