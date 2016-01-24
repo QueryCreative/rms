@@ -140,14 +140,13 @@ h6 {
 }
 
 p {
-  margin: 1em 0;
+  margin: 0.25em 0 1.5em 0;
   font-size: 16px;
   line-height: 1.4;
 }
 
 ul, ol, dl {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 0.25em 0 1.5em 0;
   font-size: 14px;
 }
 
@@ -278,6 +277,14 @@ img {
   padding-left: 0;
 }
 
+.bold, b, strong {
+  font-weight: bold;
+}
+
+.italic, i, em {
+  font-style: italic;
+}
+
 /*** type ***/
 h1, h3, h5, h2, h4, h6 {
   font-family: 'Bitter', Georgia, Times, serif;
@@ -329,6 +336,10 @@ dd {
   border-radius: 3px;
 }
 
+.callout {
+  font-size: 42px;
+}
+
 /** placeholder stuff **/
 .todo {
   color: #c80514;
@@ -347,10 +358,9 @@ dd {
 
 /*** layout ***/
 html {
-  /*background: #fff image-url('fabric-bkgd.png');
-  background: #fff image-url('handmadepaper.png');
-  background: #fff image-url('soft-bkgd.png');*/
-  background: #fff url('../images/tile-bkgd.png?1428003616');
+  background-color: white;
+  background-image: url('../images/light-bkgd.png?1453595940');
+  background-size: 87px;
 }
 
 body {
@@ -520,7 +530,8 @@ a:focus {
 }
 
 .experience p {
-  margin-bottom: .25em;
+  margin-top: 1em;
+  margin-bottom: .5em;
 }
 .experience ul {
   padding-left: 2.5em;

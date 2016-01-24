@@ -125,13 +125,15 @@ h6 {
   margin: 0.5em 0;
 }
 p {
-  margin: 1em 0;
+  // margin: 1em 0;
+  margin: 0.25em 0 1.5em 0;
   font-size: 16px;
   line-height: 1.4;
 }
 ul, ol, dl {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  // margin-top: 1em;
+  // margin-bottom: 1em;
+  margin: 0.25em 0 1.5em 0;
   font-size: 14px;
 }
 ul, ol, dd {
@@ -209,7 +211,6 @@ img {
 .underlined {
   text-decoration: underline;
 }
-
 .black {
   color: #222 !important;
 }
@@ -235,7 +236,12 @@ img {
   list-style-type: none;
   padding-left: 0;
 }
-
+.bold, b, strong {
+  font-weight: bold;
+}
+.italic, i, em {
+  font-style: italic;
+}
 /*** type ***/
 h1, h3, h5, h2, h4, h6 {
   font-family: 'Bitter', Georgia, Times, serif;
@@ -285,6 +291,10 @@ dd {
   }
 }
 
+.callout {
+  font-size: 42px;
+}
+
 /** placeholder stuff **/
 .todo {
   color: rgba(200, 5, 20, 1);
@@ -296,13 +306,15 @@ dd {
 .swapout { display: none;}
 .initial { display: block;}
 
-
 /*** layout ***/
 html {
-  /*background: #fff image-url('fabric-bkgd.png');
-  background: #fff image-url('handmadepaper.png');
-  background: #fff image-url('soft-bkgd.png');*/
-  background: #fff image-url('tile-bkgd.png');
+  background-color: white;
+  // background-image: image-url('fabric-bkgd.png');
+  // background-image: image-url('handmadepaper.png');
+  // background-image: image-url('soft-bkgd.png');
+  // background-image: image-url('tile-bkgd.png');
+  background-image: image-url('light-bkgd.png');
+  background-size: 87px;
 }
 body {
   color: #242424;
@@ -492,7 +504,8 @@ a:focus {
 
 .experience {
   p {
-    margin-bottom: .25em;
+    margin-top: 1em;
+    margin-bottom: .5em;
     span.pi {
 
     }
@@ -821,4 +834,3 @@ nav, h1 {
   .sweetpea {}
   .izzy {}
 }
-
