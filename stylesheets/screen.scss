@@ -1,7 +1,4 @@
-//
 // Application Stylesheet
-//
-
 @charset "UTF-8";
 @import url(http://fonts.googleapis.com/css?family=Bitter|Raleway);
 
@@ -180,6 +177,10 @@ img {
   width: 100%;
 }
 
+$orange: #e24912;
+$red: #bd272d;
+$background: #65646a;
+
 /**** quick styles ****/
 .hidden {
   visibility: hidden;
@@ -224,10 +225,13 @@ img {
   color: #585858;
 }
 .red {
-  color: #bd272d !important;
+  color: $red !important;
 }
 .red:hover {
   color: #e91c24;
+}
+.orange {
+  color: $orange !important;
 }
 .shadowed {
   box-shadow: 0 3px 4px rgba(0,0,0,.3);
@@ -394,7 +398,8 @@ section[role=main] {
   }
 }
 footer {
-  background-color: #f2f2f2;
+  // background-color: #f2f2f2;
+  background-color: $background;
   @media screen and (min-width: 861px) {
     -webkit-box-shadow: inset 1.5em 0px 0px 0px rgba(51,51,51,1),
                         0px -4px 4px 0px rgba(34,34,34,1);
@@ -408,21 +413,37 @@ footer {
   }
   padding: 0 5%;
   box-sizing: border-box;
-  #unl {
+  #unl,
+  #utrgv {
     float: left;
-    .unl-link {
+    .unl-link,
+    .utrgv-link {
       display: block;
       color: transparent;
       width: 75px;
       height: 31px;
       margin-top: 10px;
-      background: transparent url('/images/unl_logo.png') no-repeat center;
+      background: transparent url('/images/logo-unl-white.png') no-repeat center;
+      background-size: contain;
+    }
+    .utrgv-link {
+      width: 75px;
+      height: 31px;
+      background: transparent url('/images/utrgv-logo.png') no-repeat center;
       background-size: contain;
     }
   }
   .small {
     margin-top: 1.4em;
     font-size: 10px;
+    color: #fff;
+    a {
+      color: #fff;
+      &:hover,
+      &:focus {
+        color: #f1f1f1;
+      }
+    }
   }
   @media screen and (max-width: 520px) {
     #unl {
@@ -457,23 +478,6 @@ footer {
 /*** type ***/
 article {
   clear: both;
-  h1 {
-
-  }
-  h2 {
-
-  }
-  h3 {
-
-  }
-  p {
-
-  }
-  ul {
-    li {
-
-    }
-  }
   dl {
     dt {
       font-size: 18px;
@@ -506,9 +510,6 @@ a:focus {
   p {
     margin-top: 1em;
     margin-bottom: .5em;
-    span.pi {
-
-    }
   }
   ul {
     padding-left: 2.5em;
@@ -529,7 +530,6 @@ nav, h1 {
     color: #333;
     text-decoration: none;
   }
-
   a:visited,
   a:hover,
   a:active,

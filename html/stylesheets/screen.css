@@ -268,6 +268,10 @@ img {
   color: #e91c24;
 }
 
+.orange {
+  color: #e24912 !important;
+}
+
 .shadowed {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.3);
 }
@@ -437,7 +441,7 @@ section[role=main] article {
 }
 
 footer {
-  background-color: #f2f2f2;
+  background-color: #65646a;
   padding: 0 5%;
   box-sizing: border-box;
 }
@@ -453,21 +457,39 @@ footer {
     border-top: 1px solid #999;
   }
 }
-footer #unl {
+footer #unl,
+footer #utrgv {
   float: left;
 }
-footer #unl .unl-link {
+footer #unl .unl-link,
+footer #unl .utrgv-link,
+footer #utrgv .unl-link,
+footer #utrgv .utrgv-link {
   display: block;
   color: transparent;
   width: 75px;
   height: 31px;
   margin-top: 10px;
-  background: transparent url("/images/unl_logo.png") no-repeat center;
+  background: transparent url("/images/logo-unl-white.png") no-repeat center;
+  background-size: contain;
+}
+footer #unl .utrgv-link,
+footer #utrgv .utrgv-link {
+  width: 75px;
+  height: 31px;
+  background: transparent url("/images/utrgv-logo.png") no-repeat center;
   background-size: contain;
 }
 footer .small {
   margin-top: 1.4em;
   font-size: 10px;
+  color: #fff;
+}
+footer .small a {
+  color: #fff;
+}
+footer .small a:hover, footer .small a:focus {
+  color: #f1f1f1;
 }
 @media screen and (max-width: 520px) {
   footer #unl {

@@ -34,6 +34,12 @@ Web browser at this URL:
 <http://localhost:4000>
 
 
+Better yet - use thin
+
+  bundle exec thin start
+
+<http://localhost:3000>
+
 Compass and Sass
 ----------------
 

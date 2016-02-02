@@ -4,9 +4,9 @@
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
     %title "Rachel M. Schmitz, Sociologist"
     %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
-    %meta{name: "copyright", content: "Rachel M. Schmitz, Sociologist © 2015"}
+    %meta{name: "copyright", content: "Rachel M. Schmitz, Sociologist © 2016"}
     %meta{name: "description", content: "Rachel M. Schmitz, Sociologist"}
-    %meta{name: "keywords", content: "Sociologist, Sociology, Teaching, Research, UNL"}
+    %meta{name: "keywords", content: "Sociologist, Sociology, Teaching, Research, UNL, UTRGV"}
     %meta{name: "DC.title", content: "Rachel M. Schmitz, Sociologist"}
     %meta{name: "robots", content:"index, follow"}
 
@@ -38,7 +38,7 @@
           %li= link_to "Research", "#research", class: "swap"
           %li= link_to "CV", "#cv", class: "swap"
           %li= link_to "Contact", "#contact", class: "swap"
-          %li= link_to "4-leggeds", "#pets", class: "swap red"
+          %li= link_to "4-leggeds", "#pets", class: "swap orange"
 
     %section.clearfix{:role => "main"}
       %article.swapout.initial#index= yield
@@ -51,11 +51,14 @@
       %article.swapout#pets= render "partials/pets"
 
     %footer.clearfix
+      #utrgv
+        =link_to "UTRGV", "http://www.utrgv.edu/en-us/academics/colleges/liberal-arts/sociology-and-anthropology/index.htm", class: "utrgv-link"
       #unl
         =link_to "UNL", "http://soc.unl.edu", class: "unl-link"
+
       %p.small.right
         =link_to "Back to Top", "javascript:void(0)", class: "backtotop"
-        &#124; Rachel M. Schmitz, Sociologist © 2015
+        &#124; Rachel M. Schmitz, Sociologist © 2016
 
     %script{src: "/javascripts/swap.js"}
 
